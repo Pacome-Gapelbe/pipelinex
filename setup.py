@@ -7,7 +7,7 @@ with open('README.md') as f:
 
 setup(name='pipelx',
       python_requires='==3.12.*',
-      version='1.0',
+      version='1.0.1',
       description='Pipelx',
       long_description=LONG_DESCRIPTION,
       long_description_content_type='text/markdown',
