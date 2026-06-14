@@ -11,7 +11,7 @@ setup(name='pipelx',
       description='Pipelx',
       long_description=LONG_DESCRIPTION,
       long_description_content_type='text/markdown',
-      author='Grish',
+      author='Pacome',
       url='https://github.com/Pacome-Gapelbe/pipelinex',
       classifiers=[
           'License :: OSI Approved :: Apache Software License',

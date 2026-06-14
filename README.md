@@ -1,53 +1,71 @@
-# Notice
-To better serve Wise business and customer needs, the PipelineWise codebase needs to shrink.
-We have made the difficult decision that, going forward many components of PipelineWise will be removed or incorporated in the main repo.
-The last version before this decision is [v0.64.1](https://github.com/transferwise/pipelinewise/tree/v0.64.1)
+# Pipelx
 
-We thank all in the open-source community, that over the past 6 years, have helped to make PipelineWise a robust product for heterogeneous replication of many many Terabytes, daily
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache2-yellow.svg)](https://opensource.org/licenses/Apache-2.0)
 
-## PipelineWise
+Pipelx is a community-maintained fork of PipelineWise, an open-source ELT (Extract, Load, Transform) framework built on the Singer specification for reliable data replication and analytics ingestion.
 
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pipelinewise-tap-mysql.svg)](https://pypi.org/project/pipelinewise-tap-mysql/)
-[![License: Apache2](https://img.shields.io/badge/License-Apache2-yellow.svg)](https://opensource.org/licenses/Apache-2.0)
+Pipelx enables organizations to replicate data from operational systems into data warehouses, analytics platforms, and cloud storage with minimal configuration while preserving the simplicity and flexibility that made PipelineWise successful.
 
-PipelineWise is a Data Pipeline Framework using the [Singer.io](https://www.singer.io/) specification to ingest and replicate data from various sources to various destinations.
-Documentation is available at https://transferwise.github.io/pipelinewise/
+## Why Pipelx?
 
-![Logo](docs/img/pipelinewise-diagram-circle-bold.png)
+PipelineWise has provided a robust foundation for data replication and analytics workloads for many years. As upstream maintenance slowed, many organizations continued to depend on the platform in production.
 
+Pipelx was created to provide a sustainable continuation of the project by:
 
-## Table of Contents
+* Maintaining compatibility with existing PipelineWise deployments
+* Supporting modern Python versions and dependencies
+* Delivering bug fixes and security updates
+* Preserving the existing Singer connector ecosystem
+* Encouraging community-driven development and contributions
+* Providing a long-term path forward for organizations using PipelineWise
 
-- [PipelineWise](#pipelinewise)
-  - [Features](#features)
-  - [Official docker images](#official-docker-images)
-  - [Connectors](#connectors)
-    - [Running from docker](#running-from-docker)
-    - [Building from source](#building-from-source)
-  - [Developing with Docker](#developing-with-docker)
-  - [Contribution](#contribution)
-  - [Links](#links)
-  - [License](#license)
+## Key Features
 
-## Features
+* **ELT-first architecture** designed for modern analytics workflows
+* **Singer-compatible ecosystem** of taps and targets
+* **Automatic schema evolution** when source structures change
+* **YAML-based configuration** for version-controlled pipelines
+* **Incremental and full-table replication** support
+* **Load-time transformations** for masking and data filtering
+* **Lightweight deployment model** with no additional services required
+* **Extensible connector framework** for custom integrations
 
-* **Built with ELT in mind**: PipelineWise fits into the ELT landscape and is not a traditional ETL tool. PipelineWise aims to reproduce the data from the source to an Analytics-Data-Store in as close to the original format as possible. Some minor load time transformations are supported but complex mapping and joins have to be done in the Analytics-Data-Store to extract meaning.
+## Compatibility
 
-* **Managed Schema Changes**: When source data changes, PipelineWise detects the change and alters the schema in your Analytics-Data-Store automatically
-* **Load time transformations**: Ideal place to obfuscate, mask or filter sensitive data that should never be replicated in the Data Warehouse
-* **YAML based configuration**: Data pipelines are defined as YAML files, ensuring that the entire configuration is kept under version control
-* **Lightweight**: No daemons or database setup are required
-* **Extensible**: PipelineWise is using [Singer.io](https://www.singer.io/) compatible taps and target connectors. New connectors can be added to PipelineWise with relatively small effort
+Pipelx is designed to remain highly compatible with PipelineWise.
 
+Existing configurations, pipelines, Singer taps, Singer targets, operational workflows, and deployment patterns should continue to work with minimal or no modification.
 
-## Official docker images
+Organizations currently running PipelineWise can migrate to Pipelx gradually while preserving their existing investments and operational processes.
 
-Pipelinewise images are published to: [dockerhub](https://hub.docker.com/r/transferwiseworkspace/pipelinewise)
+## Installation
 
-Pull image with:
-```shell
-docker pull transferwiseworkspace/pipelinewise:{tag}
+```bash
+pip install pipelx
 ```
+
+## Project Status
+
+Pipelx is actively maintained as an independent fork of PipelineWise.
+
+The project focuses on:
+
+* Stability
+* Compatibility
+* Modernization
+* Dependency maintenance
+* Community contributions
+
+Bug reports, feature requests, and contributions are welcome.
+
+## Documentation
+
+Project Repository:
+
+https://github.com/Pacome-Gapelbe/pipelinex
+
+The remainder of this document describes the supported connectors, deployment options, development workflow, and operational guidance inherited from the PipelineWise ecosystem.
+
 
 ## Connectors
 
