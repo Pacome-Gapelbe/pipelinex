@@ -5,10 +5,10 @@ from setuptools import find_packages, setup
 with open('README.md') as f:
     LONG_DESCRIPTION = f.read()
 
-setup(name='pipelinewise',
+setup(name='pipelx',
       python_requires='==3.12.*',
       version='1.0',
-      description='Pipelinex',
+      description='Pipelx',
       long_description=LONG_DESCRIPTION,
       long_description_content_type='text/markdown',
       author='Grish',
